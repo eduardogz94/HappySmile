@@ -1,0 +1,187 @@
+
+CREATE TABLE products (
+                product_id INTEGER NOT NULL,
+                product_description VARCHAR NOT NULL,
+                product_cost INTEGER NOT NULL,
+                product_quantity INTEGER NOT NULL,
+                update_date VARCHAR NOT NULL,
+                min_quantity INTEGER NOT NULL,
+                CONSTRAINT products_pk PRIMARY KEY (product_id)
+);
+
+
+CREATE TABLE type_person (
+                type_id INTEGER NOT NULL,
+                type_description VARCHAR NOT NULL,
+                CONSTRAINT type_person_pk PRIMARY KEY (type_id)
+);
+
+
+CREATE TABLE persons (
+                person_id INTEGER NOT NULL,
+                name VARCHAR NOT NULL,
+                email VARCHAR NOT NULL,
+                direccion VARCHAR NOT NULL,
+                lastname VARCHAR NOT NULL,
+                fam_contact VARCHAR,
+                cel VARCHAR NOT NULL,
+                gen VARCHAR NOT NULL,
+                age INTEGER NOT NULL,
+                CONSTRAINT id PRIMARY KEY (person_id)
+);
+
+
+CREATE TABLE patients (
+                patient_id INTEGER NOT NULL,
+                person_id INTEGER NOT NULL,
+                history_id INTEGER NOT NULL,
+                pay_id INTEGER NOT NULL,
+                type_id INTEGER NOT NULL,
+                date_registration INTEGER NOT NULL,
+                CONSTRAINT patients_pk PRIMARY KEY (patient_id)
+);
+
+
+CREATE TABLE clinic_history (
+                history_id INTEGER NOT NULL,
+                patient_id INTEGER NOT NULL,
+                prob_hematologos VARCHAR NOT NULL,
+                disseases VARCHAR NOT NULL,
+                threatment VARCHAR NOT NULL,
+                cancer_death VARCHAR NOT NULL,
+                prob_penales VARCHAR NOT NULL,
+                prob_cardiovasculares VARCHAR NOT NULL,
+                intraloral_test VARCHAR NOT NULL,
+                alergy_medicaments BOOLEAN DEFAULT false NOT NULL,
+                alergy VARCHAR NOT NULL,
+                CONSTRAINT clinic_history_pk PRIMARY KEY (history_id)
+);
+
+
+CREATE TABLE pay_check (
+                pay_id INTEGER NOT NULL,
+                patient_id INTEGER NOT NULL,
+                pay_ammount INTEGER NOT NULL,
+                CONSTRAINT pay_check_pk PRIMARY KEY (pay_id)
+);
+
+
+CREATE TABLE employees (
+                employee_id VARCHAR NOT NULL,
+                person_id INTEGER NOT NULL,
+                salary_id INTEGER NOT NULL,
+                time_working INTEGER DEFAULT 0 NOT NULL,
+                type_id INTEGER NOT NULL,
+                faults INTEGER DEFAULT 0 NOT NULL,
+                shift VARCHAR NOT NULL,
+                CONSTRAINT employees_pk PRIMARY KEY (employee_id)
+);
+
+
+CREATE TABLE salary (
+                salary_id INTEGER NOT NULL,
+                employee_id VARCHAR NOT NULL,
+                pay_date INTEGER NOT NULL,
+                pay_description VARCHAR NOT NULL,
+                hours VARCHAR NOT NULL,
+                ticket INTEGER NOT NULL,
+                retentions INTEGER NOT NULL,
+                quantity INTEGER NOT NULL,
+                status BOOLEAN NOT NULL,
+                CONSTRAINT salary_pk PRIMARY KEY (salary_id)
+);
+
+
+CREATE TABLE reservation (
+                reservation_id INTEGER NOT NULL,
+                patient_id INTEGER NOT NULL,
+                employee_id VARCHAR NOT NULL,
+                status BOOLEAN NOT NULL,
+                date_reservation VARCHAR NOT NULL,
+                CONSTRAINT reservation_pk PRIMARY KEY (reservation_id)
+);
+
+
+ALTER TABLE employees ADD CONSTRAINT Medic_type_person_fk
+FOREIGN KEY (type_id)
+REFERENCES type_person (type_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE patients ADD CONSTRAINT type_person_Patient_fk
+FOREIGN KEY (type_id)
+REFERENCES type_person (type_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE employees ADD CONSTRAINT Persona_Medic_fk
+FOREIGN KEY (person_id)
+REFERENCES persons (person_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE patients ADD CONSTRAINT Persona_Patient_fk
+FOREIGN KEY (person_id)
+REFERENCES persons (person_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE reservation ADD CONSTRAINT Patient_reservation_fk
+FOREIGN KEY (patient_id)
+REFERENCES patients (patient_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE pay_check ADD CONSTRAINT patient_pay_check_fk
+FOREIGN KEY (patient_id)
+REFERENCES patients (patient_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE clinic_history ADD CONSTRAINT patients_clinic_history_fk
+FOREIGN KEY (patient_id)
+REFERENCES patients (patient_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE patients ADD CONSTRAINT clinic_history_patient_fk
+FOREIGN KEY (history_id)
+REFERENCES clinic_history (history_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE patients ADD CONSTRAINT pay_check_patient_fk
+FOREIGN KEY (pay_id)
+REFERENCES pay_check (pay_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE reservation ADD CONSTRAINT Medic_reservation_fk
+FOREIGN KEY (employee_id)
+REFERENCES employees (employee_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE salary ADD CONSTRAINT employee_pay_fk
+FOREIGN KEY (employee_id)
+REFERENCES employees (employee_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE employees ADD CONSTRAINT pay_employee_fk
+FOREIGN KEY (salary_id)
+REFERENCES salary (salary_id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;

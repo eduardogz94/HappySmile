@@ -1,0 +1,210 @@
+.container {
+    text-align: center;
+    align-content: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s
+}
+
+header {
+    padding-top: 0px;
+    margin: 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-bottom: 0px;
+    margin-top: 0%;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+body {
+    padding: 0;
+    padding-bottom: 0px;
+    /* Height of the footer */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13.5px;
+    color: black;
+}
+
+
+/* Inicio de footer */
+
+footer {
+    position: absolute;
+    top: 50px;
+    padding: 0;
+    padding-bottom: 0px;
+    margin-top: 0%;
+    width: 100%;
+    height: 0px;
+}
+
+footer .text-copyright {
+    font-size: 1.2rem;
+    margin: auto;
+    color: #676767;
+}
+
+footer .fo-item {
+    list-style: none;
+    position: relative;
+}
+
+footer .fo-item:before {
+    content: "|";
+    position: absolute;
+    left: 0;
+    color: black;
+}
+
+footer .fo-item:first-child:before {
+    content: "";
+}
+
+footer .fo-item:first-child a {
+    padding-left: 0;
+}
+
+footer .fo-item a {
+    color: #D4AF37;
+    line-height: 1rem;
+    padding: 0 16px;
+    text-decoration: initial;
+}
+nav.bar-top {
+    width: 100%;
+}
+
+nav.bar-top div.col-2 {
+    color: black;
+    margin-left: auto;
+    float: right
+}
+
+nav.bar-top div.col-2 a {
+    color: black;
+    text-decoration: none;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s
+}
+
+nav.bar-top div.col-2 a span {
+    font-family: "Franklin Gothic Book";
+    font-size: 1rem;
+}
+
+nav.bar-top div.col-2 a:hover {
+    color: #d4af37
+}
+
+#dropdown-nav {
+    margin-left: -80%;
+}
+
+.nav-account{
+    display: none;
+}
+
+.nav-reservate{
+    display: none;
+}
+
+.nav-calendar{
+    display: none;
+}
+
+.nav-history{
+    display: none;
+}
+
+.nav-contact{
+    display: inline-block;
+}
+
+.nav-services{
+    display: inline-block;
+}
+/* HEADER END*/
+
+/* style icon */
+
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+    color: black;
+}
+
+/* align icon */
+
+.left-addon .glyphicon {
+    left: 0px;
+}
+
+.right-addon .glyphicon {
+    right: 0px;
+}
+
+/* add padding  */
+
+.left-addon input {
+    padding-left: 30px;
+}
+
+.right-addon input {
+    padding-right: 30px;
+}
+
+.right-addon {
+    margin-left: 87%;
+    padding: 0 !important;
+}
+
+.form-login {
+    text-align: left !important;
+}
+
+.form {
+    text-align: center;
+    margin-left: 30%;
+}
+
+.form-group {
+    margin-left: 20px;
+}
+
+#contact-title {
+    margin-right: 95%;
+}
+
+#fo-list ul,li{
+    list-style: none;
+    margin-right: 70%;
+}
+
+#fo-ul {
+    margin-top: -2.5%;
+}
+
+.clearfix {
+    margin-left: 4%;
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { ... }
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { ... }
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { ... }
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { ... }
