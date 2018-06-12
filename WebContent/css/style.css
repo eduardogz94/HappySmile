@@ -74,7 +74,7 @@ li {
 /* Navbar*/
 #dropdown-nav {
     margin-left: -80%;
-    display: none;
+    /*display: none;*/
 }
 
 .nav-account {
@@ -107,6 +107,7 @@ li {
 
 .form-login {
     text-align: left !important;
+    margin-top: -20% 
 }
 
 .form {
@@ -125,6 +126,18 @@ li {
 #confirm-btns {
     margin-top: -15%;
     margin-right: 25%
+}
+
+#services-img{
+    margin-top: -25%;
+}
+
+#reservation-img {
+    margin-top: 2%
+}
+
+#reservation-forms {
+    margin-top: -27.9%
 }
 
 

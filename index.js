@@ -1,14 +1,9 @@
 const express = require('express');
 const session = require('express-session');
-const memcached_store = require('connect-memjs')(session);
 const morgan = require('morgan');
-const memjs = require('memjs');
 const passport = require('passport');
-const config = require('./helpers/config');
 const app = express();
 const port = process.env.PORT || 3000;
-
-
 
 app.use(express.static(__dirname + '/WebContent'));
 app.use(express.json());
