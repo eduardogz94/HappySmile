@@ -187,11 +187,16 @@ nav.bar-top div.col-2 a:hover {
 }
 
 #fo-ul {
-    margin-top: -2.5%;
+    margin-top: -2.2%;
 }
 
 .clearfix {
     margin-left: 4%;
+}
+
+#confirm-btns {
+    margin-top: -15%;
+    margin-right: 25%
 }
 
 /* Extra small devices (portrait phones, less than 576px)

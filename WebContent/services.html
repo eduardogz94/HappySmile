@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>HappySmile - Index</title>
+    <title>HappySmile - Servicios</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="libs/bootstrap-4.1.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="libs/fontawesome/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,72 +19,99 @@
     <![endif]-->
   </head>
   <header><b>
-    <div class="container col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        
-        <a class="navbar-brand" href="#">Happy-Smile</a>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Dashboard" aria-controls="Dashboard" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            
+            <a class="navbar-brand" href="#">Happy-Smile</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Dashboard" aria-controls="Dashboard" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="Dashboard">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <div class="collapse navbar-collapse" id="Dashboard">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item" id="nav-services">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item" id="nav-contact">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <div class="dropdown" id="dropdown-nav">
-              
-              <a class="btn btn-outline-primary dropdown-toggle" type="button" id="account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Testing
-              </a>
-
-              <div class="dropdown-menu" aria-labelledby="account">
-                <h6 class="dropdown-header">Welcome!</h6>
-
-                <li class="nav-item" id="nav-account">
-                  <a class="nav-link" href="#">Account</a>
+                <li class="nav-item active">
+                  <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item" id="nav-services">
+                  <a class="nav-link" href="./services.html">Servicios</a>
+                </li>
+                <li class="nav-item" id="nav-login">
+                  <a class="nav-link" href="./login.html">Ingresa</a>
                 </li>
 
-                <li class="nav-item" id="nav-reservate">
-                  <a class="nav-link" href="#">Reservate</a>
-                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <div class="dropdown" id="dropdown-nav">
+                  
+                  <a class="btn btn-outline-primary dropdown-toggle" type="button" id="account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Testing
+                  </a>
 
-                <li class="nav-item" id="nav-calendar">
-                  <a class="nav-link" href="#">Available Dates</a>
-                </li>
+                  <div class="dropdown-menu" aria-labelledby="account">
+                    <h6 class="dropdown-header">Bienvenido!</h6>
 
-                <li class="nav-item" id="nav-confirm">
-                  <a class="nav-link" href="#">Confirm</a>
-                </li>
+                    <li class="nav-item" id="nav-account">
+                      <a class="nav-link" href="#">Cuenta</a>
+                    </li>
 
-                <li class="nav-item" id="nav-history">
-                  <a class="nav-link" href="#">Clinic Hist.</a>
-                </li>
+                    <li class="nav-item" id="nav-reservate">
+                      <a class="nav-link" href="./reservation.html">Cita</a>
+                    </li>
 
-                <div class="dropdown-divider"></div>
-                  <li class="nav-item" id="nav-logout">
-                    <a class="nav-link" href="#">Logout</a>
-                  </li>
-              </div>
-            </div>
-          </form>
-      </nav>
-    </div>  
-    </header>
+                    <li class="nav-item" id="nav-calendar">
+                      <a class="nav-link" href="./calendar.html">Fechas Dispnibles</a>
+                    </li>
+
+                    <li class="nav-item" id="nav-confirm">
+                      <a class="nav-link" href="./confirm.html">Confirmar</a>
+                    </li>
+
+                    <li class="nav-item" id="nav-history">
+                      <a class="nav-link" href="./history.html">Hist. Clinica</a>
+                    </li>
+
+                    <div class="dropdown-divider"></div>
+                      <li class="nav-item" id="nav-logout">
+                        <a class="nav-link" href="#">Salir</a>
+                      </li>
+                  </div>
+                </div>
+              </form>
+          </nav>
+        </header>
 
     <body>
-        <div class="container col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
+        <div class="container col-lg-12 col-md-12 col-sm-12">
+          <br><br>
+          <div class="offset-lg-2 offset-md-2 offset-sm-2">
+            <ul>
+              <li>
+                Ortodoncia
+                <hr>
+              </li>
+              <li>
+                Panoramica
+                <hr>
+              </li>
+              <li>
+                Blanqueamiento
+                <hr>
+              </li>
+              <li>
+                Periodoncia
+                <hr>
+              </li>
+              <li>
+                Cirugia De Cordales
+                <hr>
+              </li>
+              <li>
+                Odontologia Infantil
+                <hr>
+              </li>
+            </ul>
+          </div>
         </div>
     </body>
 
@@ -93,9 +121,9 @@
         <ul class="fo-list">
           <h6 id="contact-title">Contactanos:</h6>
           <ul id="fo-ul">
-              <li>Sonrisafeliz@hotmail.com</li>
-              <li>0414-795-596</li>
-              <li>0414-468-598</li>
+              <li><i class="fas fa-envelope"></i> Sonrisafeliz@hotmail.com</li>
+              <li><i class="fas fa-phone"></i> 0414-795-596</li>
+              <li><i class="fas fa-phone"></i> 0414-468-598</li>
           </ul>
         </ul>
       </div>

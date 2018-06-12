@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>HappySmile - Login</title>
+    <title>HappySmile - Citas</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,44 +83,74 @@
 
     <body>
         <div class="container col-lg-12 col-md-12 col-sm-12">
-          <br>
-            <div id="title">
-               <h1>Log in</h1>
-               <hr>
-            </div>
-
-            <form class="form-login col-lg-5 col-md-5 col-sm-5 offset-lg-7 offset-md-7 offset-sm-7">
-              
-              <div class="form-group">
-
-                <label for="username">Username</label>
-                <input type="username" class="form-control form-control-sm" id="username" aria-describedby="emailHelp" placeholder="Enter username">
-
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-              </div>
-
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control form-control-sm" id="password" placeholder="Password">
-              </div>
-
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-              </div>
-              
-              <div class="clearfix">
-                  <small class="float-left">Not registered yet? <a href="./signup.html">Register here</a></small>
-
-                  <small class="float-right" id="forgot-war">Forgot Password?</small>
-              </div>
-
-              <div class="offset-lg-6 offset-md-6 offset-sm-6">
-                <button type="submit" class="btn btn-sm btn-outline-primary">Submit</button>
-              </div>
+          <br><br>
+          <div class="row offset-lg-5 offset-md-5 offset-sm-5">
             
-            </form>
+            <div class="col-5">
+              Paciente
+              <hr>
+              <form>
 
+                <div class="form-group row">
+                  <label for="reservation-name" class="col-lg-2 col-md-2 col-sm-2 col-form-label">Nombre</label>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <input type="text" readonly class="form-control-plaintext" id="reservation-name" value="email@example.com">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="reservation-lastname" class="col-lg-2 col-md-2 col-sm-2 col-form-label">Apellido</label>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <input type="text" readonly class="form-control-plaintext" id="reservation-lastname" value="email@example.com">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="reservation-id" class="col-lg-2 col-md-2 col-sm-2 col-form-label">Cedula</label>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <input type="text" readonly class="form-control-plaintext" id="reservation-id" value="email@example.com">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="reservation-celphone" class="col-lg-2 col-md-2 col-sm-2 col-form-label">Telefono</label>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <input type="text" readonly class="form-control-plaintext" id="reservation-celphone" value="email@example.com">
+                  </div>
+                </div>
+
+              </form>
+            </div>
+            
+            <div class="col-5">
+              Cita
+              <hr>
+              <form>
+
+                <div class="form-group row">
+                  <label for="reservation-date" class="col-lg-2 col-md-2 col-sm-2 col-form-label">Fecha</label>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <input type="text" readonly class="form-control-plaintext" id="reservation-date" value="email@example.com">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="reservation-hours" class="col-lg-2 col-md-2 col-sm-2 col-form-label">Password</label>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <input type="text" readonly class="form-control-plaintext" id="reservation-hours" value="email@example.com">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="reservation-doctor" class="col-lg-2 col-md-2 col-sm-2 col-form-label">Doctor</label>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <input type="text" readonly class="form-control-plaintext" id="reservation-doctor" value="email@example.com">
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
         </div>
     </body>
 
