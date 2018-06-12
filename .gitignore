@@ -1,2 +1,2 @@
-/node_modules
-/helpers/my_db.js
+./node_modules
+./helpers/my_db.js
