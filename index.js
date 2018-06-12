@@ -14,20 +14,10 @@ app.use(express.static(__dirname + '/WebContent'));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
-var mc = memjs.Client.create(process.env.MEMCACHIER_SERVERS, {
-  failover: true,  // default: false
-  timeout: 1,      // default: 0.5 (seconds)
-  keepAlive: true  // default: false
-})
-
 app.use(session({
   secret:'keyboardcat',
   resave: false,
   saveUninitialized: false,
-  // store: new memcached_store({
-  //   servers: [process.env.MEMCACHIER_SERVERS],
-  //   prefix: '_session_'
-  // })
 }));
 
 app.use(passport.initialize());

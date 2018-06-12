@@ -30,6 +30,7 @@ body {
 }
 
 
+
 /* Inicio de footer */
 
 footer {
@@ -53,116 +54,56 @@ footer .fo-item {
     position: relative;
 }
 
-footer .fo-item:before {
-    content: "|";
-    position: absolute;
-    left: 0;
-    color: black;
+
+#contact-title {
+    margin-right: 95%;
 }
 
-footer .fo-item:first-child:before {
-    content: "";
+#fo-list ul,
+li {
+    list-style: none;
+    margin-right: 70%;
 }
 
-footer .fo-item:first-child a {
-    padding-left: 0;
+#fo-ul {
+    margin-top: -2.2%;
 }
 
-footer .fo-item a {
-    color: #D4AF37;
-    line-height: 1rem;
-    padding: 0 16px;
-    text-decoration: initial;
-}
-nav.bar-top {
-    width: 100%;
-}
+/* End footer*/ 
 
-nav.bar-top div.col-2 {
-    color: black;
-    margin-left: auto;
-    float: right
-}
-
-nav.bar-top div.col-2 a {
-    color: black;
-    text-decoration: none;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s
-}
-
-nav.bar-top div.col-2 a span {
-    font-family: "Franklin Gothic Book";
-    font-size: 1rem;
-}
-
-nav.bar-top div.col-2 a:hover {
-    color: #d4af37
-}
-
+/* Navbar*/
 #dropdown-nav {
     margin-left: -80%;
-}
-
-.nav-account{
     display: none;
 }
 
-.nav-reservate{
+.nav-account {
     display: none;
 }
 
-.nav-calendar{
+.nav-reservate {
     display: none;
 }
 
-.nav-history{
+.nav-calendar {
     display: none;
 }
 
-.nav-contact{
+.nav-history {
+    display: none;
+}
+
+.nav-contact {
     display: inline-block;
 }
 
-.nav-services{
+.nav-services {
     display: inline-block;
 }
+
+/*Navbar end */
+
 /* HEADER END*/
-
-/* style icon */
-
-.inner-addon .glyphicon {
-    position: absolute;
-    padding: 10px;
-    pointer-events: none;
-    color: black;
-}
-
-/* align icon */
-
-.left-addon .glyphicon {
-    left: 0px;
-}
-
-.right-addon .glyphicon {
-    right: 0px;
-}
-
-/* add padding  */
-
-.left-addon input {
-    padding-left: 30px;
-}
-
-.right-addon input {
-    padding-right: 30px;
-}
-
-.right-addon {
-    margin-left: 87%;
-    padding: 0 !important;
-}
 
 .form-login {
     text-align: left !important;
@@ -177,19 +118,6 @@ nav.bar-top div.col-2 a:hover {
     margin-left: 20px;
 }
 
-#contact-title {
-    margin-right: 95%;
-}
-
-#fo-list ul,li{
-    list-style: none;
-    margin-right: 70%;
-}
-
-#fo-ul {
-    margin-top: -2.2%;
-}
-
 .clearfix {
     margin-left: 4%;
 }
@@ -199,17 +127,33 @@ nav.bar-top div.col-2 a:hover {
     margin-right: 25%
 }
 
+
 /* Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
 // Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) { ... }
+
+@media (min-width: 576px) {
+    ...
+}
+
 
 /*// Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) { ... }
+
+@media (min-width: 768px) {
+    ...
+}
+
 
 /*// Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) { ... }
+
+@media (min-width: 992px) {
+    ...
+}
+
 
 /*// Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) { ... }
+
+@media (min-width: 1200px) {
+    ...
+}
