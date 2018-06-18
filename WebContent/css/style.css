@@ -30,7 +30,6 @@ body {
 }
 
 
-
 /* Inicio de footer */
 
 footer {
@@ -69,9 +68,12 @@ li {
     margin-top: -2.2%;
 }
 
-/* End footer*/ 
+
+/* End footer*/
+
 
 /* Navbar*/
+
 #dropdown-nav {
     margin-left: -80%;
     /*display: none;*/
@@ -101,13 +103,18 @@ li {
     display: inline-block;
 }
 
+
 /*Navbar end */
+
 
 /* HEADER END*/
 
+
+/* Forms */
+
 .form-login {
     text-align: left !important;
-    margin-top: -20% 
+    margin-top: -20%
 }
 
 .form {
@@ -128,7 +135,7 @@ li {
     margin-right: 25%
 }
 
-#services-img{
+#services-img {
     margin-top: -25%;
 }
 
@@ -139,6 +146,106 @@ li {
 #reservation-forms {
     margin-top: -27.9%
 }
+
+#fields-error {
+    display: none;
+}
+
+
+
+/* Forms end */
+
+
+/* ALERTS */
+
+#login-pass {
+    display: none;
+}
+
+#login-sucess {
+    display: none;
+}
+
+#login-error {
+    display: none;
+}
+
+#login-email {
+    display: none;
+}
+
+#person-id {
+    display: none;
+}
+
+#person-sucess {
+    display: none;
+}
+
+#person-error {
+    display: none;
+}
+
+#person-email {
+    display: none;
+}
+
+#person-username {
+    display: none;
+}
+
+
+/* alerts ends*/
+
+
+/* Buttons */
+
+.btn-outline-primary {
+    background-color: white;
+    border-color: #007bff;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s outline: none;
+}
+
+.btn-outline-primary:hover {
+    color: white;
+    background-color: #007bff;
+    border-color: black;
+    outline: none;
+}
+
+
+/* Buttons ends */
+
+
+/* Patients Style */
+
+#email-patient-div {
+    display: none;
+}
+
+#name-patient-div {
+    display: none;
+}
+
+#gen-patient-div {
+    display: none;
+}
+
+#age-patient-div {
+    display: none;
+}
+
+#cel-patient-div {
+    display: none;
+}
+
+#lastname-patient-div {
+    display: none;
+}
+
+/* End of patients */
 
 
 /* Extra small devices (portrait phones, less than 576px)

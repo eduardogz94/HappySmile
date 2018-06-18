@@ -97,37 +97,60 @@
             </div>
 
             <form class="form-login col-lg-5 col-md-5 col-sm-5 offset-lg-6 offset-md-6 offset-sm-6">
-              a
+              
               <div class="form-group">
 
-                <label for="username">Username</label>
-                <input type="username" class="form-control form-control-sm" id="username" aria-describedby="emailHelp" placeholder="Enter username">
+                <label for="email">Email</label>
+                <input type="email" class="form-control form-control-sm" id="email" aria-describedby="emailHelp" placeholder="Enter email">
 
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email con nadie.</small>
               </div>
 
               <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control form-control-sm" id="password" placeholder="Password">
+                <input type="password" autocomplete="new-password" class="form-control form-control-sm" id="password" placeholder="Password">
               </div>
 
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                <label class="form-check-label" for="exampleCheck1">Recordarme?</label>
               </div>
               
               <div class="clearfix">
-                  <small class="float-left">Not registered yet? <a href="./signup.html">Register here</a></small>
+                  <small class="float-left">No te has registrado aun? <a href="./signup.html">Registrate aqui!</a></small>
 
-                  <small class="float-right" id="forgot-war">Forgot Password?</small>
+                  <small class="float-right" id="forgot-war">Olvido su contraseña?</small>
               </div>
+              
+              <br>
 
               <div class="offset-lg-6 offset-md-6 offset-sm-6">
-                <button type="submit" class="btn btn-sm btn-outline-primary">Inicio Sesion</button>
+                <button onclick="validateLogin(event)" class="btn btn-sm btn-outline-primary">Inicio Sesion</button>
               </div>
-            
-            </form>
+              
+              <br>
+              
+              <div class="alert alert-success" id="login-sucess">
+                <strong>Success!</strong> You have been logged in.
+              </div>
 
+              <div class="alert alert-danger" id="login-email">
+                <strong> Email </strong> is invalid.
+              </div>
+  
+              <div class="alert alert-danger" id="login-pass">
+                <strong> Password </strong> is invalid.
+              </div>
+              
+              <div class="alert alert-danger" id="fields-error">
+                <strong>Some fields</strong> are not filled.
+              </div>
+
+              <div class="alert alert-danger" id="login-error">
+                  There was some <strong>error</strong> try again later!.
+              </div>
+
+            </form>
         </div>
     </body>
 
@@ -137,9 +160,9 @@
         <ul class="fo-list">
           <h6 id="contact-title">Contactanos:</h6>
           <ul id="fo-ul">
-              <li><i class="fas fa-envelope"></i> Sonrisafeliz@hotmail.com</li>
-              <li><i class="fas fa-phone"></i> 0414-795-596</li>
-              <li><i class="fas fa-phone"></i> 0414-468-598</li>
+              <li><a class="fas fa-envelope" href="mailito:Sonrisafeliz@hotmail.com"> Sonrisafeliz@hotmail.com</a></li>
+              <li><a class="fas fa-phone" href="tel:0414-468-598"> 0414-795-596 </a></li>
+              <li><a class="fas fa-phone" href="tel:0414-468-598">0414-468-598</a></li>
           </ul>
         </ul>
       </div>
@@ -149,5 +172,6 @@
     <!-- jQuery library -->
     <script src="libs/jquery/jquery-3.3.1.js"></script>
     <!-- Latest compiled JavaScript -->
-    <script src="libs/bootstrap-4.1.1/dist/js/bootstrap.min.js"></script> 
+    <script src="libs/bootstrap-4.1.1/dist/js/bootstrap.min.js"></script><script src="/js/Utilities/fetch.js"></script>
+    <script src="/js/User/user.js"></script>
 </html>

@@ -11,9 +11,26 @@ router.post('/login', auth.isLogged, (req, res, next) => {
         }
         if (!user) {
             console.log(info)
-            return res.status(200).send({
-                status: info
-            });
+            switch (info.case) {
+                case 'email':
+                    return res.send({
+                        case: "email",
+                        status: 404
+                    });
+                    break;
+                case 'password':
+                    return res.send({
+                        case: "password",
+                        status: 403
+                    });
+                    break;
+                default:
+                    return res.send({
+                        case: "forbidden",
+                        status: 403
+                    });
+                    break;
+            }
         }
         req.logIn(user, function(err) {
             if (err) {
@@ -29,28 +46,53 @@ router.post('/login', auth.isLogged, (req, res, next) => {
 });
 
 
-router.post('/signup', auth.isLogged, (req, res, next) => {
-    const { name, lastname, username, password, email } = req.body;
+router.post('/newPerson', auth.isLogged, (req, res, next) => {
+    const {
+        name,
+        lastname,
+        username,
+        password,
+        email,
+        address,
+        celphone,
+        familyContact,
+        age,
+        gen,
+        id
+    } = req.body;
 
-    user.new(name, lastname, username, password, email).then((data) => {
+    let hashedPass = bcrypt.hashSync(password, 10);
+
+    user.newPerson(id, name, email, address, lastname, familyContact, celphone, gen, age, hashedPass, username).then(data => {
         res.send({
+            msg: 'registered',
             status: 200
         })
     }).catch((err) => {
+        console.log(err)
         switch (err.constraint) {
+            case 'id':
+                res.send({
+                    case: "id",
+                    status: 403
+                });
+                break;
             case 'email':
                 res.send({
-                    status: 401
+                    case: "email",
+                    status: 403
                 });
                 break;
             case 'username':
                 res.send({
-                    status: 402
+                    case: "password",
+                    status: 403
                 });
                 break;
             default:
                 res.send({
-                    status: 404
+                    case: "request",
+                    status: 403
                 });
                 break;
         }
@@ -68,9 +110,10 @@ router.get('/value', auth.isAuth, (req, res) => {
 
 router.get('/logout', auth.isAuth, (req, res) => {
     req.logout();
-    res.status(200).send({
+    res.send({
         status: 200,
     });
 });
+
 
 module.exports = router;

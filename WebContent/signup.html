@@ -2,14 +2,15 @@
 <html lang="en">
 
   <head>
-    <title>HappySmile - Index</title>
+    <title>HappySmile - Register Person</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="libs/bootstrap-4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/bootstrap-4.1.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="libs/fontawesome/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -39,6 +40,9 @@
             <li class="nav-item" id="nav-contact">
               <a class="nav-link" href="#">Contact</a>
             </li>
+            <li class="nav-item" id="nav-login">
+                <a class="nav-link" href="./login.html">Ingresa</a>
+            </li>
 
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -48,32 +52,33 @@
               </a>
 
               <div class="dropdown-menu" aria-labelledby="account">
-                <h6 class="dropdown-header">Welcome!</h6>
-                <li class="nav-item" id="nav-account">
-                  <a class="nav-link" href="#">Account</a>
-                </li>
+                 <h6 class="dropdown-header">Bienvenido!</h6>
 
-                <li class="nav-item" id="nav-reservate">
-                  <a class="nav-link" href="#">Reservate</a>
-                </li>
+                 <li class="nav-item" id="nav-account">
+                   <a class="nav-link" href="#">Cuenta</a>
+                 </li>
 
-                <li class="nav-item" id="nav-calendar">
-                  <a class="nav-link" href="#">Available Dates</a>
-                </li>
+                 <li class="nav-item" id="nav-reservate">
+                   <a class="nav-link" href="./reservation.html">Cita</a>
+                 </li>
 
-                <li class="nav-item" id="nav-confirm">
-                  <a class="nav-link" href="#">Confirm</a>
-                </li>
+                 <li class="nav-item" id="nav-calendar">
+                   <a class="nav-link" href="./calendar.html">Fechas Dispnibles</a>
+                 </li>
 
-                <li class="nav-item" id="nav-history">
-                  <a class="nav-link" href="#">Medic Hist.</a>
-                </li>
+                 <li class="nav-item" id="nav-confirm">
+                   <a class="nav-link" href="./confirm.html">Confirmar</a>
+                 </li>
 
-                <div class="dropdown-divider"></div>
-                  <li class="nav-item" id="nav-logout">
-                    <a class="nav-link" href="#">Logout</a>
-                  </li>
-              </div>
+                 <li class="nav-item" id="nav-history">
+                   <a class="nav-link" href="./history.html">Hist. Clinica</a>
+                 </li>
+
+                 <div class="dropdown-divider"></div>
+                   <li class="nav-item" id="nav-logout">
+                     <a class="nav-link" href="#">Salir</a>
+                   </li>
+               </div>
             </div>
           </form>
       </nav>
@@ -83,39 +88,113 @@
         <div class="container col-lg-12 col-md-12 col-sm-12">
           <br>
           <div id="title">
-             <h1>Sign Up</h1>
+             <h1>Register</h1>
              <hr>
           </div>
 
-          <form class="form-signup col-lg-5 col-md-5 col-sm-5 offset-lg-7 offset-md-7 offset-sm-7">
+          <form class="form-signup">
             
-            <div class="form-group">
-
-              <label for="username">Username</label>
-              <input type="username" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter username">
-
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Password">
-            </div>
-
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            
-            <div class="clearfix">
-                <label class="pull-left">Not registered yet? <a href="./signup.html">Register here</a></label>
-                <a id="forgot-war" href="./forgot.html" class="pull-right">Forgot Password?</a>
-            </div>
-            
-            <div class="offset-lg-6 offset-md-6 offset-sm-6">
-              <button type="submit" class="btn btn-sm btn-outline-primary">Submit</button>
-            </div>
+            <div class="row col-6">
           
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control form-control-sm" id="email" placeholder="Enter email">
+              </div>
+
+              <div class="form-group">
+                <label for="username">Usuario</label>
+                <input class="form-control form-control-sm" id="username" placeholder="Enter username">
+              </div>
+
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input class="form-control form-control-sm" id="name" placeholder="Enter name">
+              </div>
+
+            </div>
+            
+            <div class="row col-6">
+              <div class="form-group">
+                <label for="lastname">Apellido</label>
+                <input class="form-control form-control-sm" id="lastname" placeholder="Enter lastname">
+              </div>
+
+              <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control form-control-sm" id="password" autocomplete="suggested-password" placeholder="Enter password">
+              </div>
+
+              <div class="form-group">
+                <label for="address">Direccion</label>
+                <input class="form-control form-control-sm" id="address" placeholder="Enter address">
+              </div>
+            </div>
+
+            <div class="row col-6">
+
+              <div class="form-group">
+                <label for="celphone">Celular</label>
+                <input class="form-control form-control-sm" id="celphone" placeholder="Enter celphone">
+              </div>
+
+              <div class="form-group">
+                <label for="fam-contact">Celular Familia</label>
+                <input class="form-control form-control-sm" id="fam-contact" placeholder="Enter another celphone">
+              </div>
+
+              <div class="form-group">
+                <label for="id">Cedula</label>
+                  <input class="form-control form-control-sm" id="id" placeholder="Enter id"/>
+              </div>
+            
+            </div>
+
+            <div class="row col-6">
+              <div class="form-group">
+                <label for="age">Edad</label>
+                  <input class="form-control form-control-sm" id="age" placeholder="Enter age"/>
+              </div>
+
+              <div class="form-group">
+                <label for="gen">Gen</label>
+                  <select class="form-control form-control-sm" id="gen">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+              </div>
+            </div>
+              
+              <br>
+
+              <div class="form-group">
+                <button class="form-control-sm btn btn-sm btn-outline-primary" onclick="validateSignup(event)">Register</button>
+              </div>
+              
+              <div class="row offset-4">
+                <div class="alert alert-success" id="person-sucess">
+                  <strong>Success!</strong> You have been registered.
+                </div>
+
+                <div class="alert alert-danger" id="person-email">
+                  <strong> Email </strong> is already used.
+                </div>
+                
+                <div class="alert alert-danger" id="person-id">
+                  <strong> Id </strong> is already used.
+                </div>
+                
+                <div class="alert alert-danger" id="person-username">
+                  <strong> Username </strong> is already used.
+                </div>
+
+                <div class="alert alert-danger" id="fields-error">
+                  <strong>Some fields</strong> are not filled.
+                </div>
+
+                <div class="alert alert-danger" id="person-error">
+                    There was some <strong>error</strong> try again later!.
+                </div>
+              </div>
           </form>
 
         </div>
@@ -127,17 +206,20 @@
       <ul class="fo-list">
         <h6 id="contact-title">Contactanos:</h6>
         <ul id="fo-ul">
-            <li>Sonrisafeliz@hotmail.com</li>
-            <li><i class="fas fa-phone"></i> 0414-795-596</li>
-            <li><i class="fas fa-phone"></i> 0414-468-598</li>
+            <li><a class="fas fa-envelope" href="mailito:Sonrisafeliz@hotmail.com"> Sonrisafeliz@hotmail.com</a></li>
+            <li><a class="fas fa-phone" href="tel:0414-468-598"> 0414-795-596 </a></li>
+            <li><a class="fas fa-phone" href="tel:0414-468-598">0414-468-598</a></li>
         </ul>
       </ul>
     </div>
+
 
   </footer>  
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- jQuery library -->
     <script src="libs/jquery/jquery-3.3.1.js"></script>
     <!-- Latest compiled JavaScript -->
-    <script src="libs/bootstrap-4.0.0/js/bootstrap.min.js"></script> 
+    <script src="libs/bootstrap-4.1.1/dist/js/bootstrap.min.js"></script> 
+    <script src="/js/User/user.js"></script>
+    <script src="/js/Utilities/fetch.js"></script>
 </html>
