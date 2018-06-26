@@ -6,114 +6,163 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.ico">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="libs/bootstrap-4.1.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="libs/fontawesome/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
+    <!--<link href="libs/fontawesome/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet"> -->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!-- Full Calendar -->
+    <link rel="stylesheet" href="css/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/fullcalendar/fullcalendar.print.min.css" media="print">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery library -->
+    <script type="text/javascript" src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="libs/bootstrap-4.1.1/dist/js/bootstrap.min.js"></script> 
+    <!-- Full Calendar-->
+    <script src="libs/fullcalendar/moment.min.js"></script>
+    <script src="libs/fullcalendar/fullcalendar.min.js"></script>
+    <script src="libs/fullcalendar/theme-chooser.js"></script> 
   </head>
+  <style>
+    html, body{
+      margin: 0;
+      padding: 0;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 14px;
+    }
+    body{
+      background-image: url("images/fondo.jpg");
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover; 
+      background-size: cover;
+    }
+    #calendar{
+      max-width: 500px;
+      margin: 20px auto;
+      position: fixed;
+      left: 190px;
+      color: rgb(102, 97, 97); 
+    }
+    footer{
+      right: -300px;
+    }
+  </style>
+
   <header><b>
-    <nav class="navbar navbar-expand-md mr-0 navbar-light bg-transparent">
-                      
-        <a class="navbar-brand" href="#">Happy-Smile</a>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Dashboard" aria-controls="Dashboard" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="Dashboard">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item" id="nav-services">
-              <a class="nav-link" href="./services.html">Servicios</a>
-            </li>
-            <li class="nav-item" id="nav-contact">
-              <a class="nav-link" href="./contact.html">Contactos</a>
-            </li>
-            <li class="nav-item" id="nav-login">
-              <a class="nav-link" href="./login.html">Ingresa</a>
-            </li>
-
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
+          <nav class="navbar navbar-expand-md">
             
-            <div class="dropdown" id="dropdown-nav">
-              
-              <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Testing
-              </button>
+            <a class="navbar-brand" href="#">
+                <img src="images/sonrisafeliz.png" alt="logo" style="width: 160px; height: 90px;">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Dashboard" aria-controls="Dashboard" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-              <div class="dropdown-menu" aria-labelledby="account">
-                <h6 class="dropdown-header">Bienvenido!</h6>
+            <div class="collapse navbar-collapse" id="Dashboard">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
-                <li class="nav-item" id="nav-account">
-                  <a class="nav-link" href="#">Cuenta</a>
+                <li class="nav-item active">
+                  <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item" id="nav-services">
+                  <a class="nav-link" href="./services.html">Servicios</a>
+                </li>
+                <li class="nav-item" id="nav-contact">
+                  <a class="nav-link" href="./contact.html">Contactos</a>
+                </li>
+                <li class="nav-item" id="nav-login">
+                  <a class="nav-link" href="./login.html">Ingresa</a>
                 </li>
 
-                <li class="nav-item" id="nav-reservate">
-                  <a class="nav-link" href="./reservation.html">Cita</a>
-                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <div class="dropdown" id="dropdown-nav">
+                  
+                  <a class="btn btn-outline-primary dropdown-toggle" type="button" id="account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Testing
+                  </a>
 
-                <li class="nav-item" id="nav-calendar">
-                  <a class="nav-link" href="./calendar.html">Fechas Dispnibles</a>
-                </li>
+                  <div class="dropdown-menu" aria-labelledby="account">
+                    <h6 class="dropdown-header">Bienvenido!</h6>
 
-                <li class="nav-item" id="nav-confirm">
-                  <a class="nav-link" href="./confirm.html">Confirmar</a>
-                </li>
+                    <li class="nav-item" id="nav-account">
+                      <a class="nav-link" href="#">Cuenta</a>
+                    </li>
 
-                <li class="nav-item" id="nav-history">
-                  <a class="nav-link" href="./history.html">Hist. Clinica</a>
-                </li>
+                    <li class="nav-item" id="nav-reservate">
+                      <a class="nav-link" href="./reservation.html">Cita</a>
+                    </li>
 
-                <div class="dropdown-divider"></div>
-                  <li class="nav-item" id="nav-logout">
-                    <a class="nav-link" href="#">Salir</a>
-                  </li>
-              </div>
-            </div>
-          </form>
-      </nav>
-    </header>
+                    <li class="nav-item" id="nav-calendar">
+                      <a class="nav-link" href="./calendar.html">Fechas Dispnibles</a>
+                    </li>
+
+                    <li class="nav-item" id="nav-confirm">
+                      <a class="nav-link" href="./confirm.html">Confirmar</a>
+                    </li>
+
+                    <li class="nav-item" id="nav-history">
+                      <a class="nav-link" href="./history.html">Hist. Clinica</a>
+                    </li>
+
+                    <div class="dropdown-divider"></div>
+                      <li class="nav-item" id="nav-logout">
+                        <a class="nav-link" href="#">Salir</a>
+                      </li>
+                  </div>
+                </div>
+              </form>
+          </nav>
+        </header>
 
     <body>
         <div class="container col-lg-12 col-md-12 col-sm-12">
-          <br><br>
           <div class="col-lg-6 col-lg-6 col-lg-6 offset-lg-1 offset-md-1 offset-sm-1">
-            <h2>Fechas Disponibles</h2>
-            <hr>
-            <input type="date" name="bday">
+              <h4 class="text-center" style="color: rgb(85, 84, 84)">FECHAS DISPONIBLES</h4>
+            <hr> 
+            <div id="calendar"></div>           
           </div>
         </div>
     </body>
+  
+ <footer class="container col-lg-4 col-sm-12">
+   <div class="fo-contacto">
+     <ul class="fo-list">
+       <h6 id="contact-title">Contactanos:</h6>
+       <br>
+       <ul id="fo-ul">
+           <li><i class="fas fa-envelope"></i> Sonrisafeliz@hotmail.com</li>
+           <li><i class="fas fa-phone"></i> 0414-795-596</li>
+           <li><i class="fas fa-phone"></i> 0414-468-598</li>
+       </ul>
+     </ul>
+   </div>
 
-    <footer class="container col-lg-12 col-md-12 col-sm-12">
-      
-      <div class="fo-contacto">
-        <ul class="fo-list">
-          <h6 id="contact-title">Contactanos:</h6>
-          <ul id="fo-ul">
-              <li><a class="fas fa-envelope" href="mailito:Sonrisafeliz@hotmail.com"> Sonrisafeliz@hotmail.com</a></li>
-              <li><a class="fas fa-phone" href="tel:0414-468-598"> 0414-795-596 </a></li>
-              <li><a class="fas fa-phone" href="tel:0414-468-598">0414-468-598</a></li>
-          </ul>
-        </ul>
-      </div>
+ </footer>
 
-    </footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- jQuery library -->
-    <script src="libs/jquery/jquery-3.3.1.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="libs/bootstrap-4.1.1/dist/js/bootstrap.min.js"></script> 
+ <script>
+    $(function() {
+      $('#calendar').fullCalendar({
+        themeSystem: 'bootstrap4',
+        header: {
+          left: 'prev, today',
+          center: 'title',
+          right: 'next'
+        },
+        //navLinks:   true, 
+       // editable:   true,
+       // eventLimit: true, 
+      });
+    });
+  </script>
+
 </html>
