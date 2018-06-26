@@ -3,8 +3,9 @@ $ = (id) => document.getElementById(id);
 validatePatient = (e) => {
     e.preventDefault();
     if (id.value == '') {
-        console.log("null")
+        $('fields-id').style.display = 'inline-block';
     } else {
+        $('fields-id').style.display = 'none';
         checkPerson();
     }
 }
@@ -35,6 +36,8 @@ checkPerson = () => {
             age.value = response.user.age;
             gen.value = response.user.gen;
             last.value = response.user.lastname;
+            $('patients-id').style.display = 'none';
+            $('patients-error').style.display = 'none';
         } else {
             switch (response.case) {
                 case 'id':

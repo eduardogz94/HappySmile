@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.ico">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="libs/bootstrap-4.1.1/dist/css/bootstrap.min.css">
@@ -19,9 +20,9 @@
     <![endif]-->
   </head>
   <header><b>
-          <nav class="navbar navbar-expand-md mr-0 navbar-dark bg-dark">
-            
-            <img src="images/logo.jpg" alt="Logo" width="7%">
+  <nav class="navbar navbar-expand-md mr-0 navbar-light bg-transparent">
+                  
+            <a class="navbar-brand" href="#">Happy-Smile</a>
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Dashboard" aria-controls="Dashboard" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -45,11 +46,12 @@
 
               </ul>
               <form class="form-inline my-2 my-lg-0">
+                
                 <div class="dropdown" id="dropdown-nav">
                   
-                  <a class="btn btn-outline-primary dropdown-toggle" type="button" id="account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Testing
-                  </a>
+                  </button>
 
                   <div class="dropdown-menu" aria-labelledby="account">
                     <h6 class="dropdown-header">Bienvenido!</h6>
@@ -88,20 +90,19 @@
         <div class="container col-lg-12 col-md-12 col-sm-12">
           <br>
             <div id="title">
-               <h1>Log in</h1>
+               <h1>Inicia Sesion</h1>
                <hr>
             </div>
 
             <div class="col-lg-5 col-md-5 col-sm-5">
-              <img src="images/background.png" alt="Fondo" width="100%">
+              <img src="images/background.png" alt="Fondo" id="login-img">
             </div>
 
             <form class="form-login col-lg-5 col-md-5 col-sm-5 offset-lg-6 offset-md-6 offset-sm-6">
               
               <div class="form-group">
-
                 <label for="email">Email</label>
-                <input type="email" class="form-control form-control-sm" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="email" class="form-control form-control-sm" id="email" aria-describedby="emailHelp" placeholder="Enter email" autocomplete="suggested-email">
 
                 <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email con nadie.</small>
               </div>

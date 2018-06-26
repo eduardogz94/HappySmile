@@ -2,10 +2,11 @@
 <html lang="en">
 
   <head>
-    <title>HappySmile - New Patient</title>
+    <title>HappySmile - Agregar Paciente</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.ico">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="libs/bootstrap-4.1.1/dist/css/bootstrap.min.css">
@@ -19,7 +20,7 @@
     <![endif]-->
   </head>
   <header><b>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-md mr-0 navbar-light bg-transparent">
           
           <a class="navbar-brand" href="#">Happy-Smile</a>
           
@@ -45,11 +46,12 @@
 
             </ul>
             <form class="form-inline my-2 my-lg-0">
+              
               <div class="dropdown" id="dropdown-nav">
                 
-                <a class="btn btn-outline-primary dropdown-toggle" type="button" id="account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Testing
-                </a>
+                </button>
 
                 <div class="dropdown-menu" aria-labelledby="account">
                   <h6 class="dropdown-header">Bienvenido!</h6>
@@ -99,7 +101,7 @@
                 <div class="form-group">
                   <label for="id">Cedula</label>
                   <input class="form-control-sm" id="id" placeholder="Enter id">
-                  <button class="btn btn-sm btn-outline-primary" onclick="validatePatient(event)">Search Person</button>
+                  <button class="btn btn-sm btn-outline-primary" onclick="validatePatient(event)">Buscar Persona</button>
                 </div>
             
             <br>
@@ -163,13 +165,13 @@
                 <button class="form-control-sm btn btn-sm btn-outline-primary" onclick="addPatient(event)">Agregar Paciente</button>
               </div>
               
-              <div class="row offset-4">           
+              <div class="row offset-5">           
                 <div class="alert alert-danger" id="patients-id">
                   <strong> Id </strong> is not registered.
                 </div>
      
                 <div class="alert alert-danger" id="fields-id">
-                  <strong>Some fields</strong> are not filled.
+                  <strong>Id Field</strong> is not filled.
                 </div>
 
                 <div class="alert alert-danger" id="patients-error">

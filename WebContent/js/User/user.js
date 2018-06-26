@@ -147,7 +147,7 @@ fetchLogin = () => {
                     $('login-email').style.display = 'inline-block';
                     break;
                 case 'password':
-                    $('login-password').style.display = 'inline-block';
+                    $('login-pass').style.display = 'inline-block';
                     break;
                 case 'forbidden':
                     $('login-error').style.display = 'inline-block';

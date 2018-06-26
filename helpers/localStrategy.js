@@ -14,8 +14,11 @@ module.exports = new localStrategy({
                 status: 404
             });
         }
+        console.log(`this is the reqbody password ${password}`);
+        console.log(`this is the user password ${user.password}`);
         let hashedPass = bcrypt.hash(password, 10);
         User.comparePassword(password, user.password).then((isMatch) => {
+            console.log(isMatch);
             if (isMatch)
                 return done(null, user);
             else

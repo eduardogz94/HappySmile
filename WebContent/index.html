@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.ico">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="libs/bootstrap-4.1.1/dist/css/bootstrap.min.css">
@@ -19,70 +20,71 @@
     <![endif]-->
   </head>
   <header><b>
-          <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            
-            <a class="navbar-brand" href="#">Happy-Smile</a>
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Dashboard" aria-controls="Dashboard" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+      <nav class="navbar navbar-expand-md mr-0 navbar-light bg-transparent">
+                      
+          <a class="navbar-brand" href="#">Happy-Smile</a>
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Dashboard" aria-controls="Dashboard" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-            <div class="collapse navbar-collapse" id="Dashboard">
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <div class="collapse navbar-collapse" id="Dashboard">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
-                <li class="nav-item active">
-                  <a class="nav-link" href="./index.html">Home</a>
-                </li>
-                <li class="nav-item" id="nav-services">
-                  <a class="nav-link" href="./services.html">Servicios</a>
-                </li>
-                <li class="nav-item" id="nav-contact">
-                  <a class="nav-link" href="./contact.html">Contactos</a>
-                </li>
-                <li class="nav-item" id="nav-login">
-                  <a class="nav-link" href="./login.html">Ingresa</a>
-                </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item" id="nav-services">
+                <a class="nav-link" href="./services.html">Servicios</a>
+              </li>
+              <li class="nav-item" id="nav-contact">
+                <a class="nav-link" href="./contact.html">Contactos</a>
+              </li>
+              <li class="nav-item" id="nav-login">
+                <a class="nav-link" href="./login.html">Ingresa</a>
+              </li>
 
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <div class="dropdown" id="dropdown-nav">
-                  
-                  <a class="btn btn-outline-primary dropdown-toggle" type="button" id="account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Testing
-                  </a>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              
+              <div class="dropdown" id="dropdown-nav">
+                
+                <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Testing
+                </button>
 
-                  <div class="dropdown-menu" aria-labelledby="account">
-                    <h6 class="dropdown-header">Bienvenido!</h6>
+                <div class="dropdown-menu" aria-labelledby="account">
+                  <h6 class="dropdown-header">Bienvenido!</h6>
 
-                    <li class="nav-item" id="nav-account">
-                      <a class="nav-link" href="#">Cuenta</a>
+                  <li class="nav-item" id="nav-account">
+                    <a class="nav-link" href="#">Cuenta</a>
+                  </li>
+
+                  <li class="nav-item" id="nav-reservate">
+                    <a class="nav-link" href="./reservation.html">Cita</a>
+                  </li>
+
+                  <li class="nav-item" id="nav-calendar">
+                    <a class="nav-link" href="./calendar.html">Fechas Dispnibles</a>
+                  </li>
+
+                  <li class="nav-item" id="nav-confirm">
+                    <a class="nav-link" href="./confirm.html">Confirmar</a>
+                  </li>
+
+                  <li class="nav-item" id="nav-history">
+                    <a class="nav-link" href="./history.html">Hist. Clinica</a>
+                  </li>
+
+                  <div class="dropdown-divider"></div>
+                    <li class="nav-item" id="nav-logout">
+                      <a class="nav-link" href="#">Salir</a>
                     </li>
-
-                    <li class="nav-item" id="nav-reservate">
-                      <a class="nav-link" href="./reservation.html">Cita</a>
-                    </li>
-
-                    <li class="nav-item" id="nav-calendar">
-                      <a class="nav-link" href="./calendar.html">Fechas Dispnibles</a>
-                    </li>
-
-                    <li class="nav-item" id="nav-confirm">
-                      <a class="nav-link" href="./confirm.html">Confirmar</a>
-                    </li>
-
-                    <li class="nav-item" id="nav-history">
-                      <a class="nav-link" href="./history.html">Hist. Clinica</a>
-                    </li>
-
-                    <div class="dropdown-divider"></div>
-                      <li class="nav-item" id="nav-logout">
-                        <a class="nav-link" href="#">Salir</a>
-                      </li>
-                  </div>
                 </div>
-              </form>
-          </nav>
-        </header>
+              </div>
+            </form>
+        </nav>
+      </header>
 
     <body>
         <div class="container col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -96,9 +98,9 @@
         <ul class="fo-list">
           <h6 id="contact-title">Contactanos:</h6>
           <ul id="fo-ul">
-              <li><i class="fas fa-envelope"></i> Sonrisafeliz@hotmail.com</li>
-              <li><i class="fas fa-phone"></i> 0414-795-596</li>
-              <li><i class="fas fa-phone"></i> 0414-468-598</li>
+              <li><a class="fas fa-envelope" href="mailito:Sonrisafeliz@hotmail.com"> Sonrisafeliz@hotmail.com</a></li>
+              <li><a class="fas fa-phone" href="tel:0414-468-598"> 0414-795-596 </a></li>
+              <li><a class="fas fa-phone" href="tel:0414-468-598">0414-468-598</a></li>
           </ul>
         </ul>
       </div>

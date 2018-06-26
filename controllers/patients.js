@@ -21,7 +21,7 @@ router.post('/addPatient', (req, res) => {
     const history = 0;
     const type = 1;
 
-    if (pay == 'Pago') {
+    if (pay == 'Paid') {
         pay = 1;
     } else {
         pay = 0;

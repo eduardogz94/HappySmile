@@ -27,6 +27,8 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13.5px;
     color: black;
+    background: url("../images/fondo.jpg");
+    background-repeat: no-repeat;
 }
 
 
@@ -68,6 +70,14 @@ li {
     margin-top: -2.2%;
 }
 
+#fo-ul li > a{
+    color: #23b9b8;
+}
+
+#fo-ul a:hover{
+    text-decoration: none;
+}
+
 
 /* End footer*/
 
@@ -75,8 +85,12 @@ li {
 /* Navbar*/
 
 #dropdown-nav {
-    margin-left: -80%;
+    margin-left: -90%;
     /*display: none;*/
+}
+
+.account{
+    display: none;
 }
 
 .nav-account {
@@ -114,7 +128,7 @@ li {
 
 .form-login {
     text-align: left !important;
-    margin-top: -20%
+    margin-top: -14%
 }
 
 .form {
@@ -136,15 +150,19 @@ li {
 }
 
 #services-img {
-    margin-top: -25%;
+    margin-top: -20%;
 }
 
 #reservation-img {
-    margin-top: 2%
+    margin-top: 8%
+}
+
+#login-img {
+    margin-top: 8%
 }
 
 #reservation-forms {
-    margin-top: -27.9%
+    margin-top: -18.5%
 }
 
 #fields-error {
@@ -211,17 +229,24 @@ li {
 
 /* Buttons */
 
+.dropdown-toggle{
+    color: #fff;
+    background-color: #23b9b8;
+    border-color: #23b9b8;
+}
+
 .btn-outline-primary {
     background-color: white;
-    border-color: #007bff;
+    border-color: #23b9b8;
     -webkit-transition: all .5s;
     -o-transition: all .5s;
+    color: #23b9b8;
     transition: all .5s outline: none;
 }
 
 .btn-outline-primary:hover {
     color: white;
-    background-color: #007bff;
+    background-color: #23b9b8;
     border-color: black;
     outline: none;
 }
@@ -257,6 +282,10 @@ li {
 }
 
 /* End of patients */
+
+#unlisted-services {
+    color: #23b9b8;
+}
 
 .modal-row {
     text-align: left;
