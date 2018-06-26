@@ -27,23 +27,25 @@ CREATE TABLE persons (
                 cel VARCHAR NOT NULL,
                 gen VARCHAR NOT NULL,
                 age INTEGER NOT NULL,
+                password VARCHAR NOT NULL,
+                username VARCHAR NOT NULL,
                 CONSTRAINT id PRIMARY KEY (person_id)
 );
 
 
 CREATE TABLE patients (
-                patient_id INTEGER NOT NULL,
+                patient_id SERIAL NOT NULL,
                 person_id INTEGER NOT NULL,
-                history_id INTEGER NOT NULL,
+                history_id INTEGER DEFAULT 0,
                 pay_id INTEGER NOT NULL,
-                type_id INTEGER NOT NULL,
+                type_id INTEGER DEFAULT 1,
                 date_registration INTEGER NOT NULL,
                 CONSTRAINT patients_pk PRIMARY KEY (patient_id)
 );
 
 
 CREATE TABLE clinic_history (
-                history_id INTEGER NOT NULL,
+                history_id SERIAL NOT NULL,
                 patient_id INTEGER NOT NULL,
                 prob_hematologos VARCHAR NOT NULL,
                 disseases VARCHAR NOT NULL,
@@ -59,7 +61,7 @@ CREATE TABLE clinic_history (
 
 
 CREATE TABLE pay_check (
-                pay_id INTEGER NOT NULL,
+                pay_id SERIAL NOT NULL,
                 patient_id INTEGER NOT NULL,
                 pay_ammount INTEGER NOT NULL,
                 CONSTRAINT pay_check_pk PRIMARY KEY (pay_id)
@@ -67,7 +69,7 @@ CREATE TABLE pay_check (
 
 
 CREATE TABLE employees (
-                employee_id VARCHAR NOT NULL,
+                employee_id SERIAL NOT NULL,
                 person_id INTEGER NOT NULL,
                 salary_id INTEGER NOT NULL,
                 time_working INTEGER DEFAULT 0 NOT NULL,
@@ -79,7 +81,7 @@ CREATE TABLE employees (
 
 
 CREATE TABLE salary (
-                salary_id INTEGER NOT NULL,
+                salary_id SERIAL NOT NULL,
                 employee_id VARCHAR NOT NULL,
                 pay_date INTEGER NOT NULL,
                 pay_description VARCHAR NOT NULL,
@@ -93,7 +95,7 @@ CREATE TABLE salary (
 
 
 CREATE TABLE reservation (
-                reservation_id INTEGER NOT NULL,
+                reservation_id SERIAL NOT NULL,
                 patient_id INTEGER NOT NULL,
                 employee_id VARCHAR NOT NULL,
                 status BOOLEAN NOT NULL,

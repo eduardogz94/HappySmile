@@ -1,15 +1,5 @@
 $ = (id) => document.getElementById(id);
 
-let date = $('register-date');
-let email = $('patient-email');
-let name = $('patient-name');
-let pay = $('patient-pay');
-let cel = $('patient-cel');
-let age = $('patient-age');
-let gen = $('patient-gen');
-let last = $('patient-last');
-let id = $('id');
-
 validatePatient = (e) => {
     e.preventDefault();
     if (id.value == '') {
@@ -20,6 +10,15 @@ validatePatient = (e) => {
 }
 
 checkPerson = () => {
+    let email = $('patient-email');
+    let name = $('patient-name');
+    let cel = $('patient-cel');
+    let age = $('patient-age');
+    let gen = $('patient-gen');
+    let last = $('patient-last');
+    let date = $('register-date');
+    let pay = $('patient-pay');
+    let id = $('id');
 
     const body = {
         id: id.value
@@ -38,19 +37,70 @@ checkPerson = () => {
             last.value = response.user.lastname;
         } else {
             switch (response.case) {
-                case 'email':
-                    $('person-email').style.display = 'inline-block';
-                    break;
                 case 'id':
-                    $('person-id').style.display = 'inline-block';
-                    break;
-                case 'username':
-                    $('person-username').style.display = 'inline-block';
+                    $('patients-id').style.display = 'inline-block';
                     break;
                 case 'request':
-                    $('person-error').style.display = 'inline-block';
+                    $('patients-error').style.display = 'inline-block';
                     break;
             }
+        }
+    })
+}
+
+addPatient = (e) => {
+    e.preventDefault();
+    
+    let date = $('register-date');
+    let pay = $('patient-pay');
+    let id = $('id');
+
+    const body = {
+        id: id.value,
+        registerDate: date.value,
+        pay: pay.value
+    }
+
+    localStorage.setItem('id', id.value)
+    localStorage.setItem('registerDate', date.value)
+    localStorage.setItem('pay', pay.value)
+
+    window.location.href = "./createhistory.html"
+}
+
+addHistory = (e) => {
+    e.preventDefault();
+
+    let cardio = $('history-cardio')
+    let renals = $('history-renals')
+    let intraoral = $('history-intraoral')
+    let alergy = $('history-alergy')
+    let threatment = $('history-threatment')
+    let disseases = $('history-disseases')
+    let cancer = $('history-cancer')
+    let hemato = $('history-hemato')
+
+    const body = {
+        id: localStorage.getItem('id'),
+        registerDate: localStorage.getItem('registerDate'),
+        pay: localStorage.getItem('pay'),
+        prob_hematologos: hemato,
+        disseases: disseases,
+        threatment: threatment,
+        cancer_death: cancer,
+        prob_penales: renals,
+        prob_cardiovasculares: cardio,
+        intraloral_test: intraoral,
+        alergy_medicaments: false,
+        alergy: alergy
+    }
+
+    fetching(body, 'POST', './patients/addPatient', response => {
+        console.log(response)
+        if (response.status == 200) {
+            console.log("msg")
+        } else {
+            console.log("msg")
         }
     })
 }

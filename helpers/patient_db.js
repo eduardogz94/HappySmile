@@ -15,7 +15,7 @@ module.exports.getPatientByEmail = (email) => {
         }).catch(error => {
             rej(error)
         });
-    }));
+    });
 }
 
 module.exports.getAllPatients = () => {
@@ -34,10 +34,28 @@ module.exports.getAllPatients = () => {
     });
 }
 
-module.exports.newPatient = () => {
+module.exports.newPatient = (id, history, pay, type, date) => {
     return new Promise((res, rej) => {
         db.connect().then((obj) => {
-            obj.none('INSERT INTO patients() VALUES ()', [])
+            obj.none('INSERT INTO patients(person_id, history_id, pay_id, type_id, date_registration) VALUES ($1,$2,$3,$4,$5)', 
+                [id, history, pay, type, date])
+                .then(data => {
+                    res(data)
+                    obj.none()
+                }).catch(error => {
+                    rej(error)
+                    obj.none()
+                });
+        }).catch(error => {
+            rej(error)
+        });
+    });
+}
+
+module.exports.newHistory = (id, history, pay, type, date) => {
+    return new Promise((res, rej) => {
+        db.connect().then((obj) => {
+            obj.none('INSERT INTO clinic_history(person_id, history_id, pay_id, type_id, date_registration) VALUES ($=1,$=2,$=3,$=4,$=5)', [id, history, pay, type, date])
                 .then(data => {
                     res(data)
                     obj.none()

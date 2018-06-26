@@ -194,6 +194,17 @@ li {
     display: none;
 }
 
+#patients-error {
+    display: none;
+}
+
+#patients-id {
+    display: none;
+}
+
+#fields-id {
+    display: none;
+}
 
 /* alerts ends*/
 
@@ -247,6 +258,10 @@ li {
 
 /* End of patients */
 
+.modal-row {
+    text-align: left;
+    font-size: 0.7rem
+}
 
 /* Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap

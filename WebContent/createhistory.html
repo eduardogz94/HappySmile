@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>HappySmile - New Patient</title>
+    <title>HappySmile - Index</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -88,86 +88,68 @@
         <div class="container col-lg-12 col-md-12 col-sm-12">
           <br>
           <div id="title">
-             <h1>Nuevo Paciente</h1>
+             <h1>Nueva Historia</h1>
              <hr>
           </div>
 
-          <form class="form-patients">
-            
-            <div class="col-5 offset-4">
-          
-                <div class="form-group">
-                  <label for="id">Cedula</label>
-                  <input class="form-control-sm" id="id" placeholder="Enter id">
-                  <button class="btn btn-sm btn-outline-primary" onclick="validatePatient(event)">Search Person</button>
-                </div>
-            
-            <br>
-
-            </div>
-            
-            <div class="row col-6 offset-2">
-
-              <div class="form-group">
-                <label for="register-date">Dia De Registro</label>
-                <input type="date" class="form-control form-control-sm" id="register-date" placeholder="Enter date">
-              </div> 
-
-              <div class="form-group">
-                <label for="patient-pay">Pago</label>
-                  <select class="form-control form-control-sm" id="patient-pay">
-                    <option value="Paid">Pago</option>
-                    <option value="Not paid">No Pago</option>
-                  </select>
-              </div>
-            
-            </div> 
-            
+          <form>
+            <div class="row col-6 float-right">
               
-            <div class="row col-6">
-              <div class="form-group" id="email-patient-div">
-                <label for="patient-email">Email</label>
-                  <input readonly class="form-control-plaintext" id="patient-email">
+              <div class="form-group" >
+                <label for="history-hemato">Prob. Hematologicos</label>
+                  <input class="form-control-sm" id="history-hemato">
               </div>
 
-              <div class="form-group" id="name-patient-div">
-                <label for="patient-name">Nombre</label>
-                  <input readonly class="form-control-plaintext" id="patient-name">
+              <div class="form-group">
+                <label for="history-disseases">Enfermedades</label>
+                  <input class="form-control-sm" id="history-disseases">
+              </div>
+            
+              <div class="form-group" >
+                <label for="history-threatment">Tratamiento</label>
+                  <input class="form-control-sm" id="history-threatment">
+              </div>
+              
+              <div class="form-group">
+                <label for="history-cancer">Pariente con cancer</label>
+                  <input class="form-control-sm" id="history-cancer">
+              </div>
+            </div>
+
+            <div class="row col-6 float-left">
+
+              <div class="form-group" >
+                <label for="history-renals">Prob. renales</label>
+                  <input class="form-control-sm" id="history-renals">
               </div>
 
-              <div class="form-group" id="lastname-patient-div">
-                <label for="patient-last">Apellido</label>
-                  <input readonly class="form-control-plaintext" id="patient-last">
+              <div class="form-group">
+                <label for="history-cardio">Prob cardiovasculares</label>
+                  <input class="form-control-sm" id="history-cardio">
               </div>
 
-              <div class="form-group" id="cel-patient-div">
-                <label for="patient-cel">Celular</label>
-                  <input readonly class="form-control-plaintext" id="patient-cel">
+              <div class="form-group" >
+                <label for="history-intraoral">Prueba intraoral</label>
+                  <input class="form-control-sm" id="history-intraoral">
               </div>
-
-              <div class="form-group" id="age-patient-div">
-                <label for="patient-age">Edad</label>
-                  <input readonly class="form-control-plaintext" id="patient-age">
-              </div>
-
-              <div class="form-group" id="gen-patient-div">
-                <label for="patient-gen">Genero</label>
-                  <input readonly class="form-control-plaintext" id="patient-gen">
+              
+              <div class="form-group">
+                <label for="history-alergy">Alergias</label>
+                  <input class="form-control-sm" id="history-alergy">
               </div>
 
             </div>
-              
-              <br>
 
+            <div class="row col-6 offset-4">
               <div class="form-group">
-                <button class="form-control-sm btn btn-sm btn-outline-primary" onclick="addPatient(event)">Agregar Paciente</button>
+                <button class="form-control-sm btn btn-sm btn-outline-primary" onclick="addHistpry(event)">Crear Historia</button>
               </div>
               
               <div class="row offset-4">           
                 <div class="alert alert-danger" id="patients-id">
                   <strong> Id </strong> is not registered.
                 </div>
-     
+          
                 <div class="alert alert-danger" id="fields-id">
                   <strong>Some fields</strong> are not filled.
                 </div>
@@ -176,6 +158,9 @@
                     There was some <strong>error</strong> try again later!.
                 </div>
               </div>
+
+            </div>
+
           </form>
         </div>
     </body>
@@ -198,7 +183,5 @@
     <!-- jQuery library -->
     <script src="libs/jquery/jquery-3.3.1.js"></script>
     <!-- Latest compiled JavaScript -->
-    <script src="libs/bootstrap-4.1.1/dist/js/bootstrap.min.js"></script>
-    <script src="/js/Utilities/fetch.js"></script>
-    <script src="/js/Patients/patients.js"></script> 
+    <script src="libs/bootstrap-4.1.1/dist/js/bootstrap.min.js"></script> 
 </html>
